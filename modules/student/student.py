@@ -6,6 +6,7 @@ class student_details:
         self.gender = None
         self.mobile_number = None
         self.email_address = None
+        self.password = None
         self.preferred_language = None
         self.school_college_name = None
         self.class_grade = None
@@ -20,3 +21,7 @@ class student_details:
         self.parent_mobile_number = None
         self.parent_email_address = None
         self.preferred_communication_method = None
+    def setusernameandpassword(self, email, password):
+        self.email_address = email
+        self.password = password
+
