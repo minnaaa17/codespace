@@ -25,3 +25,14 @@ class student_details:
         self.email_address = email
         self.password = password
 
+    def set_student_details(self, full_name, date_of_birth, age, gender, mobile_number, preferred_language, school_college_name, class_grade, board_curriculum, academic_year):
+        self.full_name = full_name
+        self.date_of_birth = date_of_birth
+        self.age = age
+        self.gender = gender
+        self.mobile_number = mobile_number
+        self.preferred_language = preferred_language
+        self.school_college_name = school_college_name
+        self.class_grade = class_grade
+        self.board_curriculum = board_curriculum
+        self.academic_year = academic_year
