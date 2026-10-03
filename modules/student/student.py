@@ -36,3 +36,26 @@ class student_details:
         self.class_grade = class_grade
         self.board_curriculum = board_curriculum
         self.academic_year = academic_year
+
+    def save_basicdetails_to_db(self):
+        import sqlite3
+        conn = sqlite3.connect("tution.db")
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO student (full_name, date_of_birth, age, gender, mobile_number, email_address, password, preferred_language, school_college_name, class_grade, board_curriculum, academic_year)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""", (
+                self.full_name,
+                self.date_of_birth,
+                self.age,
+                self.gender,
+                self.mobile_number,
+                self.email_address,
+                self.password,
+                self.preferred_language,
+                self.school_college_name,
+                self.class_grade,
+                self.board_curriculum,
+                self.academic_year
+            ));
+        conn.commit()
+        conn.close()
