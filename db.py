@@ -1,4 +1,5 @@
 import sqlite3
+#ddl commands-create,alter
  
 # Create/connect to database
 conn = sqlite3.connect("tution.db")
@@ -34,11 +35,7 @@ cursor.execute("""
         areas_topics_help TEXT
     );
 """)
-cursor.execute("""
-INSERT INTO student (id,full_name,date_of_birth,age,gender,mobile_number,email_address) values(2,'Minha',17-03-2007,19,'female',7306582977,'nkfathimaminha14@gmail.com')
 
-;
-""") 
 # Save changes
 conn.commit()
  
